@@ -33,4 +33,9 @@ conexion.query('UPDATE actor SET first_name = "Steve", last_name = "Rogers" WHER
     console.log('¡Registro Actualizado!', results);
 
 });
+//borrar
+conexion.query('DELETE FROM actor WHERE actor_id = 100;', function (err, result, field) {
+    if (err) throw err;
+    console.log("Registro borrado: ", result);
+});
 conexion.end();
